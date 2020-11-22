@@ -1,0 +1,50 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5000"
+    },
+    "/api/*": {
+      "target": "http://localhost:5000"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "axios": "^0.16.2",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "material-ui-image": "^3.3.0",
+    "materialize-css": "^0.99.0",
+    "react": "^16.0.0-alpha.13",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "react-scripts": "1.0.10",
+    "react-stripe-checkout": "^2.4.0",
+    "react-test-renderer": "^17.0.1",
+    "redux": "^3.7.1",
+    "redux-form": "^7.0.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "jest-environment-jsdom": "^24.9.0",
+    "react-dom": "^17.0.1"
+  }
+}
